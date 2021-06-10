@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image: MyString
+  period: MyString
+  diets: MyString
+  height: MyString
+  weight: MyString
+  length: MyString
+  offense: 1
+  defense: 1
+
+two:
+  name: MyString
+  image: MyString
+  period: MyString
+  diets: MyString
+  height: MyString
+  weight: MyString
+  length: MyString
+  offense: 1
+  defense: 1

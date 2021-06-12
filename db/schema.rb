@@ -10,18 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_134910) do
+ActiveRecord::Schema.define(version: 2021_06_11_025928) do
 
   create_table "dinosaurs", force: :cascade do |t|
+    t.integer "mezosoic_era_id"
     t.string "name"
     t.string "image"
-    t.string "period"
     t.string "diets"
-    t.string "height"
-    t.string "weight"
-    t.string "length"
-    t.integer "offense"
-    t.integer "defense"
+    t.float "height"
+    t.float "length"
+    t.integer "weight"
+    t.string "desc"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["mezosoic_era_id"], name: "index_dinosaurs_on_mezosoic_era_id"
+  end
+
+  create_table "mezosoic_eras", force: :cascade do |t|
+    t.string "period"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

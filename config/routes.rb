@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  resources :dinosaurs
+
+  resources :mezosoic_eras do    #, only: [:index]
+    resources :dinosaurs        #, only: [:index]
+  end
+  resources :dinosaurs 
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

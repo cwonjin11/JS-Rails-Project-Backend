@@ -5,7 +5,9 @@ class DinosaursController < ApplicationController
   def index
     ##### get dinosaurs by era_id
     if params[:mezosoic_era_id]
-      @dinosaurs = Dinosaur.where(mezosoic_era_id: params[:mezosoic_era_id].to_i)
+      # @dinosaurs = Dinosaur.where(mezosoic_era_id: params[:mezosoic_era_id].to_i)
+      @mezosoic_era = MezosoicEra.find(params[:mezosoic_era_id])
+      @dinosaurs = @mezosoic_era.dinosaurs
     else
       @dinosaurs = Dinosaur.all
     end
@@ -14,7 +16,7 @@ class DinosaursController < ApplicationController
 
   end
 
-  
+
   # GET /dinosaurs/1
   def show
     render json: @dinosaur
@@ -53,6 +55,6 @@ class DinosaursController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dinosaur_params
-      params.require(:dinosaur).permit(:name, :mezosoic_era_id, :image, :period, :diets, :height, :weight, :length, :offense, :defense)
+      params.require(:dinosaur).permit(:name, :mezosoic_era_id, :image, :diets, :height, :weight, :length, :desc)
     end
 end

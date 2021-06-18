@@ -55,6 +55,6 @@ class DinosaursController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dinosaur_params
-      params.require(:dinosaur).permit(:name, :mezosoic_era_id, :image, :diets, :height, :weight, :length, :desc)
+      params.require(:dinosaur).permit(:name, :image, :mezosoic_era_id, :diets, :height, :size, :weight, :desc)
     end
 end

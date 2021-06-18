@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_06_11_025928) do
     t.string "image"
     t.string "diets"
     t.float "height"
-    t.float "length"
+    t.float "size"
     t.integer "weight"
     t.string "desc"
     t.datetime "created_at", precision: 6, null: false

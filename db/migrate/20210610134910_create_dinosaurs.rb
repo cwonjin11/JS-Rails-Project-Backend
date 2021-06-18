@@ -6,7 +6,7 @@ class CreateDinosaurs < ActiveRecord::Migration[6.1]
       t.string :image
       t.string :diets
       t.float :height
-      t.float :length
+      t.float :size
       t.integer :weight
       t.string :desc
 

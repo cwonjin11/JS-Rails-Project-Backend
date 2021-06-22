@@ -1,38 +1,7 @@
-# Dinosaur Flash Card
+Copyright 2021 Wonjin Cho
 
-## Description
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The "Dinosaur Flash Card" Single Page Application (SPA) shows dinosaurs cards by when they lived. User may click each Mesozoic Era to find associated dinosaurs. By having name and image on the front of the card, from the back side, user can find each dinosaur's details; size, diets, period, length etc. 
- A user may create any favorite dinosaur by adding image as well as deleting any cards.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-
-**This repo should be used in conjunction with the backend repo link listed below to fully experience the app's functionality.**
-
-Once both servers are up and running a user may modify or add to the backend database from the Rails API as they see fit on their local machine. 
-
-
-## Install Instructions
-
-- Fork and clone the link from this repo.
-
-- run 'rails s' to fire up the backend server and type 'open index.html' in the frontend terminal.
-
-
-## Backend Repo Link
-
-https://github.com/cwonjin11/JS-Rails-Project-Frontend
-
-
-
-## License
-
-- This app is licensed under The MIT License located here: https://github.com/cwonjin11/JS-Rails-Project-Frontend/blob/main/LICENSE.md
-
-
-## Sources
-
-- https://rubygems.org/ 
-- https://www.w3schools.com/
-
-
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

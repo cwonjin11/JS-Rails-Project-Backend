@@ -7,25 +7,25 @@ class DinosaursController < ApplicationController
     if params[:mezosoic_era_id]
       # @dinosaurs = Dinosaur.where(mezosoic_era_id: params[:mezosoic_era_id].to_i)
       @mezosoic_era = MezosoicEra.find(params[:mezosoic_era_id])
-      @dinosaurs = @mezosoic_era.dinosaurs
+      dinosaurs = @mezosoic_era.dinosaurs                      #delete @ from the dinosaurs
     else
-      @dinosaurs = Dinosaur.all
+      dinosaurs = Dinosaur.all                                  #delete @ from the dinosaurs
     end
     
-    render json: @dinosaurs
+    render json: dinosaurs,include: :mezosoic_era 
 
   end
 
 
   # GET /dinosaurs/1
   def show
-    render json: @dinosaur
+    render json: @dinosaur,include: :mezosoic_era 
   end
 
   # POST /dinosaurs
   def create
     @dinosaur = Dinosaur.new(dinosaur_params)
-
+    # binding.pry
     if @dinosaur.save
       render json: @dinosaur, status: :created, location: @dinosaur
     else
@@ -36,7 +36,7 @@ class DinosaursController < ApplicationController
   # PATCH/PUT /dinosaurs/1
   def update
     if @dinosaur.update(dinosaur_params)
-      render json: @dinosaur
+      render json: @dinosaur,include: :mezosoic_era 
     else
       render json: @dinosaur.errors, status: :unprocessable_entity
     end

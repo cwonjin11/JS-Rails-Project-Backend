@@ -5,12 +5,12 @@ class MezosoicErasController < ApplicationController
   def index
     @mezosoic_eras = MezosoicEra.all
 
-    render json: @mezosoic_eras
+    render json: @mezosoic_eras, include: :dinosaurs #or serializer  //added from the review
   end
 
   # GET /mezosoic_eras/1
   def show
-    render json: @mezosoic_era
+    render json: @mezosoic_era, include: :dinosaurs #or serializer
   end
 
   # POST /mezosoic_eras
@@ -27,7 +27,7 @@ class MezosoicErasController < ApplicationController
   # PATCH/PUT /mezosoic_eras/1
   def update
     if @mezosoic_era.update(mezosoic_era_params)
-      render json: @mezosoic_era
+      render json: @mezosoic_era, include: :dinosaurs
     else
       render json: @mezosoic_era.errors, status: :unprocessable_entity
     end
